@@ -1,0 +1,14 @@
+/* Estilo Personalizado */
+.hero-section {
+    background-color: #f8f9fa;
+}
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+    }
+}
