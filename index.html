@@ -357,27 +357,54 @@
                 </form>
             </div>
         </section>
-    <footer>
-            <div class="container preto2">
-                <p>
-                    &copy; Point do Pet - Todos os direitos reservados - 2024
-                </p>
-                <span>
-                   
-                </span>
-                <ul class="socialmidias">
-                    <li>
-                        <a href="https://www.instagram.com/" title="instagram" target="_blank">
-                            <img src="./imagens/instagram.png" alt="instagram" title="instagram">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.whatsapp.com/" title="instagram" target="_blank">
-                            <img src="./imagens/whatsapp.png" alt="whatsapp" title="whatsapp">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+   <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <!-- Logo e informações -->
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo-link">
+          <img src="./imagens/S-logo-normal.png" alt="SOLVENZA BPO Financeiro" class="footer-logo" width="180" height="60">
+        </a>
+        <p class="footer-slogan">Soluções financeiras estratégicas para seu negócio</p>
+      </div>
+
+      <!-- Direitos autorais -->
+      <div class="footer-copyright">
+        <p>&copy; <span id="current-year">2024</span> SOLVENZA BPO FINANCEIRO - Todos os direitos reservados</p>
+        <p class="footer-address">Endereço: Rua Exemplo, 123 - São Paulo/SP</p>
+      </div>
+
+      <!-- Redes sociais -->
+      <div class="footer-social">
+        <h3 class="social-title">Siga-nos</h3>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5562981127550" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+        <!-- Adicione isto antes do fechamento do body -->
+<a href="https://wa.me/5562981127550" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
