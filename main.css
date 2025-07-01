@@ -25,7 +25,7 @@ font-family: 'Arial', sans-serif;
 
 
 .main-header {
-    background-color: #ffffff;
+    background-color: #065738;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -77,7 +77,7 @@ font-family: 'Arial', sans-serif;
 }
 
 .nav-link {
-    color: #2c3e50;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
@@ -114,7 +114,7 @@ font-family: 'Arial', sans-serif;
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #2c3e50;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -275,7 +275,7 @@ font-family: 'Arial', sans-serif;
         .benefits-section {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 20px 20px;
         }
 
         .benefits-section h2 {
@@ -302,15 +302,41 @@ font-family: 'Arial', sans-serif;
         }
 
         .benefit-image {
-            flex: 1 1 300px;
-            min-height: 300px;
-            background-size: cover;
-            background-position: center;
-        }
+    flex: 1 1 300px;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom suave ao passar o mouse */
+.benefit-card:hover .benefit-image {
+    transform: scale(1.03);
+}
+
+/* Sobreposição de cor para melhor legibilidade do texto */
+.benefit-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.benefit-card:hover .benefit-image::before {
+    opacity: 1;
+}
 
         .benefit-content {
             flex: 2 1 500px;
-            padding: 40px;
+            padding: 20px;
         }
 
         .benefit-content h3 {
@@ -324,26 +350,27 @@ font-family: 'Arial', sans-serif;
             margin-bottom: 15px;
         }
 
-        /* Cores e imagens diferentes para cada card */
-        .benefit-card:nth-child(1) .benefit-image {
-            background-color: #e3f2fd;
-            background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');
-        }
+        /* Cores e imagens diferentes para cada card - CORREÇÃO (usando nth-of-type) */
+.benefit-card:nth-of-type(1) .benefit-image {
+    background-color: #e3f2fd;
+    background-image: url('imagens/Mais-tempo.jpg');
+}
 
-        .benefit-card:nth-child(2) .benefit-image {
-            background-color: #e8f5e9;
-            background-image: url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');
-        }
+.benefit-card:nth-of-type(2) .benefit-image {
+    background-color: #e8f5e9;
+    background-image: url('imagens/controle-total.jpg');
+}
 
-        .benefit-card:nth-child(3) .benefit-image {
-            background-color: #fff3e0;
-            background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');
-        }
+.benefit-card:nth-of-type(3) .benefit-image {
+    background-color: #fff3e0;
+    background-image: url('imagens/tome.jpg');
+}
 
-        .benefit-card:nth-child(4) .benefit-image {
-            background-color: #f3e5f5;
-            background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');
-        }
+.benefit-card:nth-of-type(4) .benefit-image {
+    background-color: #f3e5f5;
+    background-image: url('imagens/nova-imagem.jpg');
+}
+
 
         /* Responsividade */
         @media (max-width: 768px) {
@@ -376,7 +403,7 @@ font-family: 'Arial', sans-serif;
             }
             
             .benefit-content {
-                padding: 20px;
+                padding: 10px;
             }
         }
 
@@ -393,18 +420,41 @@ font-family: 'Arial', sans-serif;
             line-height: 1.6;
         }
 
-        .comparison-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
+/*Funcionário CLT X Terceirização com a Solvenza*/
+
+        .comparison-section-wrapper {
+    width: 100%;
+    background: #065738;
+    padding: 30px 0; /* Espaço vertical */
+}
+
+.comparison-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+}
 
         .comparison-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
+    text-align: center;
+    font-size: 2.4rem;
+    margin: 40px 0 60px;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.comparison-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #127026, #5cb85c, #075718);
+    border-radius: 2px;
+}
 
         .comparison-container {
             display: flex;
@@ -1172,7 +1222,7 @@ h1 {
 
 /* ==================== RODAPÉ ==================== */
 .site-footer {
-  background-color: #2c3e50;
+  background-color: #065738;
   color: #ffffff;
   padding: 40px 0 20px;
   font-size: 0.95rem;
@@ -1302,3 +1352,6 @@ h1 {
     gap: 15px;
   }
 }
+
+
+
