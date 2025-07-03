@@ -1,65 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Solvenza BPO Financeiro</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Signika&display=swap" rel="stylesheet">
-    
-
+    <title>SOLVENZA BPO FINANCEIRO</title>
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ícones do Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="main-header" role="banner">
-  <div class="header-container">
-    <div class="container">
-      <div class="header-content">
-        <!-- Logo com link para home -->
-        <a href="#home" class="logo-link" aria-label="Página inicial da Solvenza">
-          <img src="./imagens/S-logo-normal.png" 
-               alt="SOLVENZA BPO Financeiro" 
-               class="logo"
-               width="150"
-               height="50">
-        </a>
-        
-        <!-- Navegação principal -->
-        <nav class="main-nav" aria-label="Navegação principal">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#Serviços" class="nav-link">SERVIÇOS</a>
-            </li>
-            <li class="nav-item">
-              <a href="#Beneficios" class="nav-link">BENEFÍCIOS</a>
-            </li>
-            <li class="nav-item">
-              <a href="#Valores" class="nav-link">VALORES</a>
-            </li>
-            <li class="nav-item">
-              <a href="#Sobre" class="nav-link">SOBRE</a>
-            </li>
-          </ul>
-        </nav>
-        
-        <!-- Contato e CTA -->
-        <div class="header-contact">
-          <a href="tel:+55 62 98112-7550" class="phone-link" aria-label="Ligar para Solvenza">
-            <i class="fas fa-phone-alt" aria-hidden="true"></i>
-            <span>(62) 98112-7550</span>
-          </a>
-          <button class="header-cta" aria-label="FALE CONOSCO">
-            FALE CONOSCO
-          </button>
+   <header class="main-header">
+    <div class="header-container">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo-link">
+                    <img src="./imagens/S-logo-normal.png" alt="Logo" class="logo">
+                </a>
+                
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    ☰
+                </button>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#Serviços" class="nav-link">Serviços</a></li>
+                        <li class="nav-item"><a href="#Beneficios" class="nav-link">Benefícios</a></li>
+                        <li class="nav-item"><a href="#Valores" class="nav-link">Valores</a></li>
+			<li class="nav-item"><a href="#Sobre" class="nav-link">Sobre</a></li>
+                    </ul>
+                    
+                    <div class="header-contact header-content">
+    <a href="tel:+5562981127550" class="phone-link">
+        <i class="fas fa-phone"></i> (062) 98112-7550
+    </a>
+    <button class="header-cta">FALE CONOSCO</button>
+</div>
+                </nav>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </header>
-    <section class="solvenza-section">
+
+<!-- primeiro conteúdo da section -->
+
+ <section class="solvenza-section">
     <div class="container">
         <div class="content-wrapper">
             <article class="financeiro-content">
@@ -88,109 +75,10 @@
     </div>
 </section>
 
-<style>
-    .solvenza-section {
-        padding: 2rem 0;
-    }
-    
-    .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-    
-    .content-wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .financeiro-content {
-        order: 2;
-    }
-    
-    .financeiro-image {
-        order: 1;
-        margin-bottom: 2rem;
-        position: relative;
-    }
-    
-    .team-photo {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    
-    .image-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 1rem;
-        text-align: center;
-    }
-    
-    .divider {
-        height: 3px;
-        background: #5a2e2e;
-        margin: 1rem 0;
-        width: 100px;
-    }
-    
-    .benefits-list {
-        margin: 1rem 0;
-        padding-left: 1.5rem;
-    }
-    
-    .benefits-list li {
-        margin-bottom: 0.5rem;
-    }
-    
-    .button-container {
-        text-align: left; /* padrão para desktop */
-    }
-    
-    .cta-button {
-        background: gold;
-        color: white;
-        border: none;
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-        border-radius: 4px;
-        cursor: pointer;
-        margin-top: 1rem;
-        display: inline-block;
-    }
-    
-    @media (min-width: 768px) {
-        .content-wrapper {
-            flex-direction: row;
-            align-items: center;
-            gap: 2rem;
-        }
-        
-        .financeiro-content {
-            flex: 1;
-            order: 1;
-        }
-        
-        .financeiro-image {
-            flex: 1;
-            order: 2;
-            margin-bottom: 0;
-        }
-    }
-    
-    @media (max-width: 767px) {
-        .button-container {
-            text-align: center; /* centraliza apenas no mobile */
-        }
-    }
-</style>
-<section class="help-section">
-        <h2><i class="fas fa-hands-helping" style="margin-right: 10px;"></i> Saiba como vamos te ajudar!</h2>
+<!-- segundo conteúdo da section -->
+
+<section class="help-section" id="Serviços">
+        <h2><i class="fas fa-hands-helping" style="margin-right: 10px;" ></i> Saiba como vamos te ajudar!</h2>
         
         <div class="help-grid">
             <div class="help-item">
@@ -263,8 +151,10 @@
         </div>
     </section>
 
-    <section class="benefits-section">
-        <h2>Benefícios de um Financeiro Terceirizado</h2>
+<div class="verde">
+
+    <section class="benefits-section container">
+        <h2 id="Beneficios">Benefícios de um Financeiro Terceirizado</h2>
         
         <div class="benefit-card">
             <div class="benefit-image"></div>
@@ -303,9 +193,15 @@
             </div>
         </div>
     </section>
+
+</div>
+    
+
+<!-- terceiro conteúdo da section -->
+ 
 <div class="comparison-section-wrapper">
     <section class="comparison-section">
-        <h2 >FUNCIONÁRIO CLT X TERCEIRIZAÇÃO COM A SOLVENZA</h2>
+        <h2 id="Valores">FUNCIONÁRIO CLT X TERCEIRIZAÇÃO COM A SOLVENZA</h2>
         
         <div class="comparison-container">
             <div class="comparison-card">
@@ -408,9 +304,12 @@
         </div>
     </section>
 </div>
-    
 
-    <section class="form-section" id="contato">
+<!-- sesão formularios -->
+
+
+<div class="verde">
+	<section class="form-section" id="contato">
             <div class="form-container">
                 <div class="form-header">
                     <h2>Fale conosco</h2>
@@ -459,7 +358,49 @@
                 </form>
             </div>
         </section>
-   <footer class="site-footer">
+
+</div>
+
+<section class="solvenza-about cor"  id="Sobre">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <div class="highlight-box">
+                    <p class="highlight-text">"Especialistas em BPO Financeiro, a Solvenza oferece gestão financeira terceirizada com tecnologia e expertise para empresas que buscam eficiência operacional e redução de custos. Transforme seu departamento financeiro em uma vantagem competitiva."</p>
+                </div>
+                
+                <div class="mission-vision">
+                    <div class="mv-item">
+                        <h3><span class="icon">📌</span> Missão</h3>
+                        <p>Prestar serviços financeiros com clareza, praticidade, excelência e agilidade, promovendo o crescimento e o desenvolvimento das empresas que atendemos.</p>
+                    </div>
+                    
+                    <div class="mv-item">
+                        <h3><span class="icon">👁️</span> Visão</h3>
+                        <p>Ser referência em serviços financeiros, destacando-se pela qualidade, confiança e contribuição efetiva para o crescimento dos negócios de nossos clientes.</p>
+                    </div>
+                </div>
+                
+                <div class="values">
+                    <h3><span class="icon">❤️</span> Valores</h3>
+                    <ul>
+                        <li>Ética em primeiro lugar</li>
+                        <li>Verdade e transparência</li>
+                        <li>Compromisso com o sucesso do cliente</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="about-image">
+                <img src="./imagens/Foto-final1.png"" alt="Equipe Solvenza" class="responsive-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- rodapé -->
+
+<footer class="site-footer">
   <div class="footer-container">
     <div class="footer-content">
       <!-- Logo e informações -->
@@ -504,10 +445,10 @@
 <a href="https://wa.me/5562981127550" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 
-<script>
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-</script>
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
@@ -536,7 +477,5 @@
     });
 });
 </script>
- <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+
 </html>
