@@ -168,7 +168,7 @@ html {
 }
 
 .header-cta {
-    background-color: #3498db;
+    background-color: GOLD;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -274,7 +274,7 @@ html {
 
  .solvenza-section {
         padding: 2rem 0;
-	background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	background: #ffffff;
 
     }    
     .container {
@@ -300,21 +300,13 @@ html {
     }
     
     .team-photo {
-        width: 100%;
+        width: 80%;
         height: auto;
         display: block;
+        align-items: center;
     }
     
-    .image-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 1rem;
-        text-align: center;
-    }
+   
     
     .divider {
         height: 3px;
@@ -349,7 +341,7 @@ html {
     }
 
     .subtitle {
-    color: #3498db;
+    color: #092D14;
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
@@ -358,12 +350,12 @@ html {
 .divider {
     width: 80px;
     height: 4px;
-    background: #3498db;
+    background: #092D14;;
     margin-bottom: 2rem;
 }
 
 .cta-button {
-    background: #3498db;
+    background: #092D14;;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -377,24 +369,6 @@ html {
 .cta-button:hover {
     background: #2980b9;
     transform: translateY(-2px);
-}
-
-.team-photo {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.image-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(52, 152, 219, 0.9);
-    color: white;
-    padding: 1.5rem;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
 }
 
     
@@ -433,11 +407,11 @@ html {
             background-color: #f8f9fa;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-	    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+	    background: #092D14;;
         }
         
         .help-section h2 {
-            color: #2c3e50;
+            color: #ffffff;
             text-align: center;
             margin-bottom: 30px;
             font-size: 28px;
@@ -450,7 +424,7 @@ html {
             display: block;
             width: 80px;
             height: 4px;
-            background: #3498db;
+            background: #ffffff;
             margin: 15px auto 0;
             border-radius: 2px;
         }
@@ -479,12 +453,12 @@ html {
         .help-icon {
             font-size: 24px;
             margin-right: 15px;
-            color: #3498db;
+            color: #092D14;;
             min-width: 30px;
         }
         
         .help-text {
-            color: #34495e;
+            color: #000000;
             font-size: 16px;
             line-height: 1.4;
         }
@@ -493,7 +467,7 @@ html {
             text-align: center;
             margin-top: 30px;
             font-style: italic;
-            color: #7f8c8d;
+            color: #eef7f8;
             font-size: 14px;
         }
         
@@ -543,7 +517,7 @@ html {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 50px;
-            color: #ffffff;
+            color: #092D14;;
         }
 
         .benefit-card {
@@ -563,8 +537,8 @@ html {
         }
 
         .benefit-image {
-    flex: 1 1 300px;
-    min-height: 300px;
+    flex: 1 1 350px;
+    min-height: 350px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -603,7 +577,7 @@ html {
         .benefit-content h3 {
             font-size: 1.8rem;
             margin-bottom: 20px;
-            color: #3498db;
+            color: #092D14;;
         }
 
         .benefit-content p {
@@ -673,7 +647,7 @@ html {
 
         .comparison-section-wrapper {
     width: 100%;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: #092D14;
     padding: 30px 0; /* Espaço vertical */
 }
 
@@ -688,7 +662,7 @@ html {
     text-align: center;
     font-size: 2.4rem;
     margin: 40px 0 60px;
-    color: #092D14;
+    color: #FFFFFF;
     position: relative;
     padding-bottom: 20px;
 }
@@ -785,8 +759,8 @@ html {
         }
 
         .savings-banner {
-            background-color: #3498db;
-            color: white;
+            background-color: #FFFFFF;
+            color: #092D14;
             text-align: center;
             padding: 30px;
             border-radius: 10px;
@@ -1136,6 +1110,7 @@ html {
   color: #ffffff;
   font-style: italic;
   margin-top: 10px;
+  text-align: left;
 }
 
 .footer-copyright {
@@ -1161,12 +1136,14 @@ html {
   font-size: 1.1rem;
   margin-bottom: 15px;
   color: #ecf0f1;
+  
 }
 
 .social-links {
   display: flex;
   gap: 20px;
   list-style: none;
+  text-align: left;
 }
 
 .social-links a {
@@ -1279,7 +1256,7 @@ html {
     
     .highlight-box {
         background-color: #f8f9fa;
-        border-left: 4px solid #0066cc;
+        border-left: 4px solid #092D14;
         padding: 20px;
         margin-bottom: 30px;
         border-radius: 0 8px 8px 0;
@@ -1301,7 +1278,7 @@ html {
     }
     
     .mv-item h3, .values h3 {
-        color: #0066cc;
+        color: #092D14;
         font-size: 1.3rem;
         margin-bottom: 15px;
         display: flex;
@@ -1331,7 +1308,7 @@ html {
     
     .values li:before {
         content: "✓";
-        color: #0066cc;
+        color: #092D14;
         font-weight: bold;
         position: absolute;
         left: 0;
