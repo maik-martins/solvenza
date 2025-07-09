@@ -36,7 +36,7 @@
     <a href="tel:+5562981127550" class="phone-link">
         <i class="fas fa-phone"></i> (062) 98112-7550
     </a>
-    <button class="header-cta">FALE CONOSCO</button>
+    <button class="header-cta" onclick="window.location.href='#contato'">FALE CONOSCO</button>
 </div>
                 </nav>
             </div>
@@ -62,7 +62,7 @@
                     <li>Redução de custos operacionais</li>
                 </ul>
                 <div class="button-container">
-                    <button class="cta-button">FALE COM UM ESPECIALISTA</button>
+                    <button class="cta-button "  onclick="window.location.href='#contato'">FALE COM UM ESPECIALISTA</button>
                 </div>
             </article>
             <article class="financeiro-image">
@@ -309,7 +309,6 @@
 
 <!-- sesão formularios -->
 
-
 <div class="verde">
 	<section class="form-section" id="contato">
             <div class="form-container">
@@ -319,7 +318,11 @@
                     <p><i class="fas fa-info-circle"></i> Todos os campos são obrigatórios para melhor atendê-lo.</p>
                 </div>
 
-                <form class="contact-form" action="#" method="POST">
+                <form class="contact-form" action="https://formsubmit.co/Alessandra@solvenzabpofinanceiro.com.br" method="POST">
+    <!-- Adicione estes campos ocultos para personalizar o e-mail -->
+    <input type="hidden" name="_subject" value="Novo contato do site">
+    <input type="hidden" name="_autoresponse" value="Obrigado pelo contato! Retornaremos em breve.">
+    <input type="hidden" name="_next" value="https://seusite.com/obrigado.html"> <!-- Página de confirmação -->
                     <div class="form-group">
                         <label for="name">Nome completo*</label>
                         <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
@@ -472,6 +475,32 @@
             }
         });
     });
+});
+</script>
+
+<script>
+document.querySelector('.contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(e.target);
+    const response = await fetch('https://seu-backend.com/api/enviar', {
+        method: 'POST',
+        body: formData
+    });
+    
+    if (response.ok) {
+        alert('Mensagem enviada!');
+        e.target.reset();
+    } else {
+        alert('Erro ao enviar.');
+    }
+});
+
+document.getElementById('whatsapp').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length > 2) value = `(${value.substring(0, 2)}) ${value.substring(2)}`;
+    if (value.length > 10) value = `${value.substring(0, 10)}-${value.substring(10, 14)}`;
+    e.target.value = value;
 });
 </script>
 

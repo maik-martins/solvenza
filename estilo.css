@@ -23,6 +23,25 @@ html {
 	background-color: #092D14;	
 }
 
+#Serviços {
+    scroll-margin-top: 80px; /* Ajuste para a altura do cabeçalho */
+}
+
+#Beneficios {
+    scroll-margin-top: 110px; /* Ajuste para a altura do cabeçalho */
+}
+
+#Valores {
+    scroll-margin-top: 120px; /* Ajuste para a altura do cabeçalho */
+}
+
+#Sobre {
+    scroll-margin-top: 50px; /* Ajuste para a altura do cabeçalho */
+}
+
+#contato {
+    scroll-margin-top: 50px; /* Ajuste para a altura do cabeçalho */
+}
 
 /* Estrutura do Header */
 
