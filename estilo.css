@@ -319,7 +319,7 @@ html {
     }
     
     .team-photo {
-        width: 80%;
+        width: 85%;
         height: auto;
         display: block;
         align-items: center;
@@ -1088,167 +1088,6 @@ html {
   }
 }
 
-/* ==================== RODAPÉ ==================== */
-.site-footer {
-  background: #092D14;
-  color: #ffffff;
-  padding: 40px 0 20px;
-  font-size: 0.95rem;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.footer-brand {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer-logo {
-  height: 90px;
-  width: auto;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
-}
-
-.footer-logo:hover {
-  transform: scale(1.05);
-}
-
-.footer-slogan {
-  color: #ffffff;
-  font-style: italic;
-  margin-top: 10px;
-  text-align: left;
-}
-
-.footer-copyright {
-  flex: 1;
-  min-width: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.footer-address {
-  color: #ffffff;
-  margin-top: 10px;
-  font-size: 0.9rem;
-}
-
-.footer-social {
-  flex: 1;
-  min-width: 250px;
-}
-
-.social-title {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  color: #ecf0f1;
-  
-}
-
-.social-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  text-align: left;
-}
-
-.social-links a {
-  color: #ffffff;
-  background-color: #34495e;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-  background-color: #3498db;
-  transform: translateY(-3px);
-}
-
-.social-links i {
-  font-size: 1.2rem;
-}
-
-/* Ano atual dinâmico */
-#current-year {
-  font-weight: bold;
-}
-
-/* ==================== RESPONSIVIDADE ==================== */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 25px;
-  }
-  
-  .footer-brand, 
-  .footer-copyright,
-  .footer-social {
-    min-width: 100%;
-    text-align: center;
-  }
-  
-  .social-links {
-    justify-content: center;
-  }
-  
-  .footer-logo {
-    margin: 0 auto 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .site-footer {
-    padding: 30px 0 15px;
-  }
-  
-  .social-links {
-    gap: 15px;
-  }
-}  
-
-
-  /* Classe .form-page substituindo o body */
-        .form-page {
-            background-color: var(--light-gray);
-            color: var(--primary-color);
-            line-height: 1.6;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-/* ==================== VARIÁVEIS E RESET ==================== */
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #2980b9;
-            --light-gray: #f5f5f5;
-            --medium-gray: #e0e0e0;
-            --dark-gray: #7f8c8d;
-            --white: #ffffff;
-            --success-color: #27ae60;
-            --transition: all 0.3s ease;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
 /*section sobre*/
 
   .solvenza-about {
@@ -1358,6 +1197,169 @@ html {
             font-size: 1.3rem;
         }
     }
+
+/* ==================== RODAPÉ ==================== */
+.site-footer {
+  background: #092D14;
+  color: #ffffff;
+  padding: 40px 0 20px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-brand {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  height: 90px;
+  width: auto;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.footer-slogan {
+  color: #ffffff;
+  font-style: italic;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.footer-copyright {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer-address {
+  color: #ffffff;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  flex: 1;
+  min-width: 250px;
+}
+
+.social-title {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #ecf0f1;
+  
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding-left: 0%;
+}
+
+.social-links a {
+  color: #ffffff;
+  background-color: #34495e;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #3498db;
+  transform: translateY(-3px);
+}
+
+.social-links i {
+  font-size: 1.2rem;
+}
+
+/* Ano atual dinâmico */
+#current-year {
+  font-weight: bold;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .footer-brand, 
+  .footer-copyright,
+  .footer-social {
+    min-width: 100%;
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .footer-logo {
+    margin: 0 auto 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 30px 0 15px;
+  }
+  
+  .social-links {
+    gap: 15px;
+  }
+}  
+
+
+  /* Classe .form-page substituindo o body */
+        .form-page {
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+/* ==================== VARIÁVEIS E RESET ==================== */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #2980b9;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+            --dark-gray: #7f8c8d;
+            --white: #ffffff;
+            --success-color: #27ae60;
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+
 
 
 
