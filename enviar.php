@@ -41,12 +41,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </html>
     ";
     
-    // Cabeçalhos do e-mail
-    $headers = "From: Solvenza BPO Financeiro <contato@solvenzabpofinanceiro.com.br>\r\n";
-    $headers .= "Reply-To: $nome <no-reply@solvenzabpofinanceiro.com.br>\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();
+   // Cabeçalhos do e-mail
+// Corrigir cabeçalhos
+$headers = "From: Alessandra Solvenza <alessandra@solvenzabpofinanceiro.com.br>\r\n";
+$headers .= "Reply-To: $nome <$email>\r\n"; // Adicione um campo email no formulário
+$headers .= "Return-Path: alessandra@solvenzabpofinanceiro.com.br\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
     // Envia o e-mail
     if (mail($to, $subject, $message, $headers)) {
