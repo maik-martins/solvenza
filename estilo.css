@@ -136,8 +136,13 @@ html {
     display: block;
 }
 
+.nav-link {
+    position: relative; /* necessário para o pseudo-elemento ::after */
+    transition: all 0.3s ease;
+}
+
 .nav-link:hover {
-    color: #3498db;
+    color: #FFA500; /* cor laranja médio do gradiente */
 }
 
 .nav-link::after {
@@ -147,7 +152,7 @@ html {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #3498db;
+    background: linear-gradient(90deg, #FFD700, #FFA500); /* gradiente horizontal */
     transition: width 0.3s ease;
 }
 
@@ -177,7 +182,9 @@ html {
 }
 
 .phone-link:hover {
-    color: #3498db;
+    color: #FF8C00; /* laranja mais escuro do gradiente */
+    text-shadow: 0 1px 1px rgba(255, 140, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .phone-link i {
@@ -187,7 +194,7 @@ html {
 }
 
 .header-cta {
-    background-color: GOLD;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -195,12 +202,19 @@ html {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-cta:hover {
-    background-color: #2980b9;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #FFC000 0%, #FF8C00 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-cta:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* =============================================
@@ -313,17 +327,21 @@ html {
     }
     
     .financeiro-image {
-        order: 1;
-        margin-bottom: 2rem;
-        position: relative;
-    }
-    
-    .team-photo {
-        width: 85%;
-        height: auto;
-        display: block;
-        align-items: center;
-    }
+    order: 1;
+    margin-bottom: 2rem;
+    display: flex;           /* Ativa o flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    width: 100%;            /* Ocupa toda a largura disponível */
+}
+
+.team-photo {
+    width: 85%;
+    max-width: 600px;       /* Opcional: define largura máxima */
+    height: auto;
+    display: block;         /* Mantém como block para imagens */
+    margin: 0 auto;         /* Centralização adicional */
+}
     
    
     
@@ -347,18 +365,6 @@ html {
         text-align: left; /* padrão para desktop */
     }
     
-    .cta-button {
-        background: gold;
-        color: white;
-        border: none;
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-        border-radius: 4px;
-        cursor: pointer;
-        margin-top: 1rem;
-        display: inline-block;
-    }
-
     .subtitle {
     color: #092D14;
     font-size: 1.5rem;
@@ -374,22 +380,23 @@ html {
 }
 
 .cta-button {
-    background: #092D14;;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
     color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 10px 20px;
     border-radius: 4px;
-    font-size: 1rem;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 1rem;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
-    background: #2980b9;
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #FFC000 0%, #FF8C00 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-
     
     @media (min-width: 768px) {
         .content-wrapper {
@@ -491,28 +498,34 @@ html {
         }
         
         .specialist-button {
-            display: block;
-            width: 250px;
-            margin: 40px auto 20px;
-            padding: 15px 25px;
-            background-color: gold;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        
-        .specialist-button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(52, 152, 219, 0.4);
-        }
+    display: block;
+    width: 250px;
+    margin: 40px auto 20px;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.specialist-button:hover {
+    background: linear-gradient(135deg, #FFC000 0%, #FF8C00 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 140, 0, 0.4);
+}
+
+.specialist-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3);
+}
         
         .specialist-button i {
             margin-right: 10px;
@@ -858,15 +871,15 @@ html {
         }
 
         .form-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 80px;
-            height: 4px;
-            background-color: var(--secondary-color);
-            border-radius: 2px;
-        }
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #FFD700, #FFA500); /* gradiente horizontal */
+    border-radius: 2px;
+}
 
         .form-header p {
             color: #ffffff;
@@ -969,25 +982,32 @@ html {
         }
 
         /* Botão de submit */
-        .submit-btn {
-            width: 100%;
-            padding: 16px;
-            background-color: gold;
-            color: var(--white);
-            border: none;
-            border-radius: var(--border-radius);
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            margin-top: 10px;
-        }
+       .submit-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 10px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3);
+}
 
-        .submit-btn:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
+.submit-btn:hover {
+    background: linear-gradient(135deg, #FFC000 0%, #FF8C00 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 140, 0, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3);
+}
 
         /* ==================== RESPONSIVIDADE ==================== */
         @media (max-width: 768px) {
