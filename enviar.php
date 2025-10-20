@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Configurações do e-mail
-    $to = "alessandra@solvenzabpofinanceiro.com.br";
+    $to = "contato@solvenza.com.br";
     $subject = "Novo contato do site - " . $empresa;
     
     // Corpo do e-mail em HTML
@@ -43,9 +43,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
    // Cabeçalhos do e-mail
 // Corrigir cabeçalhos
-$headers = "From: Alessandra Solvenza <alessandra@solvenzabpofinanceiro.com.br>\r\n";
+$headers = "From: Alessandra Solvenza <contato@solvenza.com.br>\r\n";
 $headers .= "Reply-To: $nome <$email>\r\n"; // Adicione um campo email no formulário
-$headers .= "Return-Path: alessandra@solvenzabpofinanceiro.com.br\r\n";
+$headers .= "Return-Path: contato@solvenza.com.br\r\n";
 $headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
